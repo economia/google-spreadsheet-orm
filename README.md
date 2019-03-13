@@ -113,7 +113,7 @@ console.log(user[0]) // { username: 'foobar', email: 'bar@foo.com' ...}
 	* Sets collumn names of the model. Should be used wisely
 * `static getWorksheetID(model: typeof AbstractModel): number`
 	* Extracts worksheet id from the model
-* `setWorksheedID(model: typeof AbstractModel, worksheedId: number): void`
+* `static setWorksheedID(model: typeof AbstractModel, worksheedId: number): void`
 	* Sets worksheed id of the model. Should be used wisely
 * `static getAuthClient(email: string, key: any, keyId: any, scopes?: string[])`
 	* Creates JWT token
