@@ -43,7 +43,13 @@ class SheetConnection {
   }
 
   static async connect(config: Config): Promise<SheetConnection>;
-  static async connect(config: Config, email: string, key: any, keyId: any, scopes: string[]): Promise<SheetConnection>;
+  static async connect(
+    config: Config,
+    email: string,
+    key: any,
+    keyId: any,
+    scopes?: string[],
+  ): Promise<SheetConnection>;
   static async connect(...args: any[]): Promise<SheetConnection> {
     let instance = new SheetConnection(args[0]);
     // build auth client

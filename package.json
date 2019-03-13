@@ -2,9 +2,9 @@
   "name": "google-spreadsheet-orm",
   "version": "0.0.1",
   "author": {
-	"name": "Lukas \"Deathrage\" Prochazka",
-    "email": "lukas@lukasprochazka.net",
-    "url": "http://www.lukasprochazka.net"
+	"name": "Blackbox Team",
+	"email": "blackbox@economia.cz",
+	"url": "https://www.economia.cz/"
   },
   "license": "MIT",
   "description": "Use google sheets for small database-like projects.",
