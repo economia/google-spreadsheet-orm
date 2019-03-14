@@ -102,8 +102,8 @@ class SheetConnection {
     // if rowid is missing append it to the end
     if (!(rId && rId > 0)) {
       let infos = await this.getInfos(info.constructor as any);
-      let indexes = infos.map(info => Number(info.rowId));
-      let max = Math.max(...indexes);
+      let indexes = infos.map(info => Number(info.rowId) || 0);
+      let max = indexes.length ? Math.max(...indexes) : 0;
       rId = max + 1;
     }
 
