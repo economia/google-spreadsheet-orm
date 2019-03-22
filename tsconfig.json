@@ -13,9 +13,7 @@
 		"sourceMap":true,
 
 		"outDir": "dist",
-
 		"target": "es5",
-		"lib": ["dom"],
 		"module": "commonjs",
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true
