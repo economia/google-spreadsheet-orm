@@ -98,7 +98,14 @@ class SheetConnection {
    */
   async setInfo<T extends AbstractModel>(info: T): Promise<T> {
     let rId = Number(info.rowId);
-    if (!(rId && rId > 0)) throw new Error('Must have rowId indicated its row');
+
+    // if rowid is missing append it to the end
+    if (!(rId && rId > 0)) {
+      let infos = await this.getInfos(info.constructor as any);
+      let indexes = infos.map(info => Number(info.rowId) || 0);
+      let max = indexes.length ? Math.max(...indexes) : 0;
+      rId = max + 1;
+    }
 
     let pR = info.parsedRow;
     let wsId = SheetConnection.getWorksheetID(info.constructor as typeof AbstractModel);

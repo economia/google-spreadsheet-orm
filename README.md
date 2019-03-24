@@ -14,6 +14,19 @@ Small tool to turn Google Spreadsheet into simple admin panel.
 npm i --save @it-econonomia/google-spreadsheet-orm
 ```
 
+First you need support for decorators. It can be either done by Babel and it's decorator plugin or by TSC (Typescript Compiler).
+
+```
+tsconfig.json
+{
+	"compilerOption" {
+		...
+		"experimentalDecorators": true,
+		...
+	}
+}
+```
+
 ### Establishing connection
 
 First thing is to establish connection to Google Api via SheetConnection static method connect that returns own instance in Promise. SheetConnection can be established only once. Any further attempts to make connection will result in error.
@@ -21,8 +34,6 @@ First thing is to establish connection to Google Api via SheetConnection static 
 ```
 // ES6
 import SheetConnection from '@it-econonomia/google-spreadsheet-orm';
-// CommonJS
-const SheetConnection = require('@it-econonomia/google-spreadsheet-orm').default;
 
 let sheetConnection = SheetConnection.connect(config);
 ```

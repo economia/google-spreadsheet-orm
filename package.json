@@ -1,45 +1,41 @@
 {
-  "name": "google-spreadsheet-orm",
-  "version": "0.0.1",
+  "name": "@it-economia/google-spreadsheet-orm",
+  "version": "0.0.5",
   "author": {
-	"name": "Blackbox Team",
-	"email": "blackbox@economia.cz",
-	"url": "https://www.economia.cz/"
+    "name": "Blackbox Team",
+    "email": "blackbox@economia.cz",
+    "url": "https://www.economia.cz/"
   },
   "license": "MIT",
   "description": "Use google sheets for small database-like projects.",
   "keywords": [
-	  "google",
-	  "sheets",
-	  "spreadsheets",
-	  "orm",
-	  "api",
-	  "database",
-	  "database-like",
-	  "admin",
-	  "typescript"
+    "google",
+    "sheets",
+    "spreadsheets",
+    "orm",
+    "api",
+    "database",
+    "database-like",
+    "admin",
+    "typescript"
   ],
-
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/economia/google-spreadsheet-orm.git"
   },
-
   "scripts": {
     "build": "tsc",
     "format": "npm run prettier -- --write",
     "test": "jest",
-	"prettier": "prettier **/*.ts",
-	"prepare": "npm run build",
-	"prepublishOnly": "npm run test"
+    "prettier": "prettier **/*.ts",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test"
   },
-
   "devDependencies": {
     "@types/jest": "^24.0.9",
     "@types/node": "^11.11.0",
@@ -58,6 +54,7 @@
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",
     "ts-jest": "^24.0.0",
+    "ts-node": "^8.0.3",
     "typescript": "^3.3.3333"
   },
   "husky": {
